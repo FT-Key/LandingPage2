@@ -16,10 +16,14 @@ body {
   z-index: 1050;
 }
 
+.bg-nav-custom {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 /* MAIN */
 
 .hero {
-  background: url('https://images.pexels.com/photos/941864/pexels-photo-941864.jpeg?cs=srgb&dl=pexels-chanwalrus-941864.jpg&fm=jpg') no-repeat center center/cover;
+  background: url('./img/index/fondo1.webp') no-repeat center center/cover;
   height: 100vh;
   position: relative;
   text-align: center;
@@ -54,7 +58,7 @@ body {
 .carousel-background {
   position: absolute;
   inset: 0;
-  background-image: url('https://png.pngtree.com/background/20230425/original/pngtree-wood-table-from-nature-with-green-leaves-picture-image_2473738.jpg');
+  background-image: url('./img/index/fondo2.webp');
   background-size: cover;
   background-position: center;
   filter: blur(4px) brightness(60%);
@@ -155,4 +159,39 @@ body {
   to {
     left: 100%;
   }
+}
+
+.slider .item {
+  position: absolute;
+  left: 100%;
+  animation: autoRun 25s linear infinite;
+  width: var(--width);
+  height: var(--height);
+  overflow: hidden;
+}
+
+.slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 20px 20px;
+  pointer-events: none;
+}
+
+.slider .item:hover .text-overlay {
+  opacity: 1;
 }
