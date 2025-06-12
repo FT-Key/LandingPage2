@@ -1,0 +1,32 @@
+.contactContainer {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  /* Para que el pseudo-elemento no se desborde */
+  z-index: 0;
+  /* Asegura que el contenido esté arriba */
+  padding: 2rem 0;
+}
+
+.contactContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('../img/contacto/contactoFondo.webp') center/cover no-repeat;
+  filter: blur(8px);
+  /* Ajustá el valor a tu gusto */
+  z-index: -1;
+  /* Lo coloca detrás del contenido */
+}
+
+
+.invalid-feedback p,
+.valid-feedback p {
+  display: inline-block;
+  padding: .25rem;
+  border-radius: .25rem;
+  background: rgba(0, 0, 0, 0.5);
+}
